@@ -12,5 +12,21 @@ public class SumOfTwoDiamentionalArray {
             System.out.println(sum);
         }
 
+
+
+        for(int i=0;i< arr.length;i++){
+            for(int j=0;j< arr[i].length;j++){
+                int temp=arr[i][j];
+                arr[i][j]=arr[j][i];
+                arr[j][i]=temp;
+            }
+        }
+        for(int[] row:arr){
+            for(int col:row){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+
     }
 }
